@@ -1,0 +1,6 @@
+# See https://www.robotstxt.org/robotstxt.html for more info
+
+User-agent: *
+Allow: /
+
+Sitemap: https://unlettrd.com/sitemap.xml
