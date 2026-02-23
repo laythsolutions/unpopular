@@ -13,37 +13,65 @@ const categories: Record<string, {
 }> = {
   philosophy: {
     title: 'Philosophy',
-    description: 'Exploring life\'s big questions through ancient wisdom and modern insights.',
+    description: 'Ideas, ethics, political philosophy, and the frameworks that shape our thinking.',
     gradient: 'from-primary-600 via-primary-700 to-accent-purple',
     accent: 'primary',
     icon: '',
   },
-  poetry: {
-    title: 'Poetry',
-    description: 'Verses that speak to the heart, distilling complex truths into beautiful words.',
-    gradient: 'from-accent-purple via-accent-purple-dark to-primary-600',
-    accent: 'purple',
-    icon: '',
-  },
-  culture: {
-    title: 'Culture',
-    description: 'Examining the trends, movements, and moments that shape our collective experience.',
+  politics: {
+    title: 'Politics',
+    description: 'Power, governance, policy analysis from unpopular perspectives.',
     gradient: 'from-accent-orange via-accent-orange-dark to-accent-coral',
     accent: 'orange',
     icon: '',
   },
-  interviews: {
-    title: 'Interviews',
-    description: 'Conversations with thinkers, artists, and leaders shaping our world.',
+  technology: {
+    title: 'Technology',
+    description: 'Tech critique, AI, surveillance capitalism, and digital life examined philosophically.',
+    gradient: 'from-accent-purple via-accent-purple-dark to-primary-600',
+    accent: 'purple',
+    icon: '',
+  },
+  finance: {
+    title: 'Finance',
+    description: 'Economics, markets, money systems, wealth critique, and the philosophy of capital.',
+    gradient: 'from-brand-red via-brand-red-dark to-accent-orange',
+    accent: 'red',
+    icon: '',
+  },
+  health: {
+    title: 'Health',
+    description: 'Medicine, wellness, bioethics, food systems, and questioning medical consensus.',
     gradient: 'from-primary-600 via-accent-purple to-accent-purple-dark',
     accent: 'purple',
     icon: '',
   },
-  essays: {
-    title: 'Essays',
-    description: 'Long-form explorations of ideas that matter, from the personal to the universal.',
+  sport: {
+    title: 'Sport',
+    description: 'Athletics, competition, the culture of games, and what sports reveal about human nature.',
+    gradient: 'from-accent-orange via-accent-orange-dark to-primary-600',
+    accent: 'orange',
+    icon: '',
+  },
+  'literature-culture': {
+    title: 'Literature & Culture',
+    description: 'Books, art, media, poetry — and how culture shapes what we believe.',
+    gradient: 'from-primary-600 via-primary-700 to-accent-purple',
+    accent: 'primary',
+    icon: '',
+  },
+  interviews: {
+    title: 'Interviews',
+    description: 'Conversations with thinkers, contrarians, and people who see things differently.',
     gradient: 'from-brand-red via-brand-red-dark to-accent-orange',
     accent: 'red',
+    icon: '',
+  },
+  essays: {
+    title: 'Essays',
+    description: 'Long-form eclectic writing that doesn\'t fit neat categories.',
+    gradient: 'from-accent-purple via-accent-purple-dark to-primary-600',
+    accent: 'purple',
     icon: '',
   },
 }
@@ -63,8 +91,8 @@ const allArticles = {
     },
     {
       id: 2,
-      title: 'Stoic Wisdom for Modern Anxiety',
-      excerpt: 'Ancient techniques for managing overwhelming stress in today\'s fast-paced world.',
+      title: 'Why Intellectual Humility Is the Ultimate Skill',
+      excerpt: 'The ability to say "I might be wrong" is rare. And it\'s exactly what we need right now.',
       author: 'David Park',
       date: 'Feb 12, 2026',
       readTime: '7 min',
@@ -74,122 +102,229 @@ const allArticles = {
     },
     {
       id: 3,
-      title: 'The Philosophy of Slow Living',
-      excerpt: 'Embracing intentionality in a world obsessed with speed and productivity.',
+      title: 'The Wisdom of Doubt: A Guide to Not Knowing',
+      excerpt: 'Certainty is overrated. The most interesting ideas live in the space of "not yet."',
       author: 'Marcus Webb',
       date: 'Feb 10, 2026',
       readTime: '9 min',
       views: '15.2K',
       image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop',
-      featured: false,
+      featured: true,
     },
+  ],
+  politics: [
     {
       id: 4,
-      title: 'Understanding Modern Existentialism',
-      excerpt: 'Making sense of meaning in a post-religious, hyper-connected world.',
+      title: 'Power Doesn\'t Corrupt. Power Reveals.',
+      excerpt: 'The classic saying gets it backward. Power unmasks who you already were.',
       author: 'Elena Rodriguez',
-      date: 'Feb 8, 2026',
-      readTime: '11 min',
+      date: 'Feb 14, 2026',
+      readTime: '10 min',
       views: '18.3K',
-      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop',
       featured: true,
     },
     {
       id: 5,
-      title: 'The Wisdom of Insecurity',
-      excerpt: 'Learning to be comfortable with uncertainty and finding peace in the unknown.',
+      title: 'Why Every Political Movement Eventually Betrays Its Principles',
+      excerpt: 'From revolution to institution: the predictable decay of idealistic causes.',
       author: 'Sarah Chen',
-      date: 'Feb 5, 2026',
-      readTime: '6 min',
-      views: '7.8K',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
-      featured: false,
-    },
-  ],
-  poetry: [
-    {
-      id: 6,
-      title: 'Reflections on Stillness: A Poetry Collection',
-      excerpt: 'Verses that speak to the heart of our collective uncertainty and hope.',
-      author: 'Marcus Webb',
-      date: 'Feb 14, 2026',
-      readTime: '5 min',
-      views: '8.7K',
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop',
+      date: 'Feb 11, 2026',
+      readTime: '12 min',
+      views: '14.2K',
+      image: 'https://images.unsplash.com/photo-1575320181282-9afab399332c?w=600&h=400&fit=crop',
       featured: true,
     },
     {
-      id: 7,
-      title: 'Why Poetry Matters More Than Ever',
-      excerpt: 'In times of crisis, poetry becomes essential for processing human experience.',
-      author: 'Sarah Chen',
-      date: 'Feb 11, 2026',
-      readTime: '6 min',
-      views: '14.5K',
-      image: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1?w=600&h=400&fit=crop',
+      id: 6,
+      title: 'The Bureaucratic Mind: How Systems Think, Not People',
+      excerpt: 'Organizations develop their own logic. Humans become mere components.',
+      author: 'David Park',
+      date: 'Feb 8, 2026',
+      readTime: '8 min',
+      views: '11.7K',
+      image: 'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=600&h=400&fit=crop',
       featured: false,
+    },
+  ],
+  technology: [
+    {
+      id: 7,
+      title: 'Why Regulation Always Lags Behind Technological Disruption',
+      excerpt: 'The structure of law makes it inevitable: rules are always fighting the last war.',
+      author: 'Marcus Webb',
+      date: 'Feb 13, 2026',
+      readTime: '11 min',
+      views: '16.8K',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+      featured: true,
     },
     {
       id: 8,
-      title: 'Poetry as Resistance',
-      excerpt: 'How verse can challenge oppressive systems and give voice to the marginalized.',
+      title: 'The Ethics of AI Consciousness: Are We Creating Moral Subjects?',
+      excerpt: 'At what point does a simulation of mind deserve moral consideration?',
       author: 'Elena Rodriguez',
-      date: 'Feb 9, 2026',
-      readTime: '7 min',
-      views: '11.2K',
-      image: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1?w=600&h=400&fit=crop',
+      date: 'Feb 10, 2026',
+      readTime: '13 min',
+      views: '22.4K',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=400&fit=crop',
       featured: true,
     },
     {
       id: 9,
-      title: 'The Art of Metaphor',
-      excerpt: 'Exploring how figurative language transforms our understanding of reality.',
-      author: 'David Park',
-      date: 'Feb 6, 2026',
-      readTime: '5 min',
-      views: '6.9K',
-      image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop',
+      title: 'Surveillance Capitalism: You\'re Not the Customer, You\'re the Product',
+      excerpt: 'The economic model that powers big tech is fundamentally predatory.',
+      author: 'Sarah Chen',
+      date: 'Feb 7, 2026',
+      readTime: '9 min',
+      views: '19.1K',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
       featured: false,
     },
   ],
-  culture: [
+  finance: [
     {
       id: 10,
-      title: 'The Return of the Long Read in the Age of TikTok',
-      excerpt: 'Why deep reading is making a comeback among younger generations.',
-      author: 'Elena Rodriguez',
-      date: 'Feb 13, 2026',
-      readTime: '6 min',
-      views: '7.2K',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
+      title: 'The Invisible Tax: How Inflation Steals From the Poor Silently',
+      excerpt: 'Inflation isn\'t rising prices. It\'s a hidden transfer of wealth.',
+      author: 'David Park',
+      date: 'Feb 12, 2026',
+      readTime: '10 min',
+      views: '24.3K',
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop',
       featured: true,
     },
     {
       id: 11,
-      title: 'The Art of Conversation: Rediscovering Deep Dialogue',
-      excerpt: 'In an era of shallow communication, meaningful conversation is revolutionary.',
+      title: 'Why Modern Monetary Theory Is Dangerous',
+      excerpt: 'The idea that governments can print money without consequences is seductive. And wrong.',
       author: 'Marcus Webb',
-      date: 'Feb 11, 2026',
-      readTime: '8 min',
-      views: '10.3K',
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop',
-      featured: false,
+      date: 'Feb 9, 2026',
+      readTime: '14 min',
+      views: '17.9K',
+      image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&h=400&fit=crop',
+      featured: true,
     },
     {
       id: 12,
-      title: 'Digital Mindfulness in the Age of Distraction',
-      excerpt: 'How to cultivate awareness when every app wants your attention.',
+      title: 'The Financialization of Everything',
+      excerpt: 'When housing becomes an asset class and healthcare becomes an investment, something fundamental breaks.',
+      author: 'Elena Rodriguez',
+      date: 'Feb 6, 2026',
+      readTime: '11 min',
+      views: '13.5K',
+      image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=400&fit=crop',
+      featured: false,
+    },
+  ],
+  health: [
+    {
+      id: 13,
+      title: 'Medical Consensus Isn\'t Truth: What We Got Wrong About Diet',
+      excerpt: 'The food pyramid was built on weak science. Millions followed bad advice.',
+      author: 'Sarah Chen',
+      date: 'Feb 11, 2026',
+      readTime: '12 min',
+      views: '31.2K',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop',
+      featured: true,
+    },
+    {
+      id: 14,
+      title: 'The Wellness Industry Sells Anxiety Back to You',
+      excerpt: 'Biohacking, optimization, and the commodification of health anxiety.',
       author: 'David Park',
       date: 'Feb 8, 2026',
+      readTime: '9 min',
+      views: '15.7K',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
+      featured: true,
+    },
+    {
+      id: 15,
+      title: 'Why We Sleep: The Forgotten Pillar of Health',
+      excerpt: 'Every system in your body breaks without sleep. Yet we treat rest like laziness.',
+      author: 'Marcus Webb',
+      date: 'Feb 5, 2026',
+      readTime: '8 min',
+      views: '21.4K',
+      image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
+      featured: false,
+    },
+  ],
+  sport: [
+    {
+      id: 16,
+      title: 'The Commodification of Athletics: When Sport Became Content',
+      excerpt: 'NIL deals, transfer portals, and the death of amateur competition.',
+      author: 'Elena Rodriguez',
+      date: 'Feb 10, 2026',
+      readTime: '10 min',
+      views: '18.9K',
+      image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop',
+      featured: true,
+    },
+    {
+      id: 17,
+      title: 'What Competition Reveals About Character',
+      excerpt: 'Under pressure, the mask falls. Sports show us who people actually are.',
+      author: 'David Park',
+      date: 'Feb 7, 2026',
       readTime: '7 min',
-      views: '13.1K',
-      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop',
+      views: '12.3K',
+      image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=400&fit=crop',
+      featured: false,
+    },
+    {
+      id: 18,
+      title: 'The Dying Art of the Local Team',
+      excerpt: 'Globalization killed regional sports culture. We lost more than we gained.',
+      author: 'Sarah Chen',
+      date: 'Feb 4, 2026',
+      readTime: '9 min',
+      views: '9.8K',
+      image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&h=400&fit=crop',
+      featured: true,
+    },
+  ],
+  'literature-culture': [
+    {
+      id: 19,
+      title: 'Why Nobody Reads Anymore: The Death of Cultural Literacy',
+      excerpt: 'We traded deep engagement for infinite scrolling. The cost is higher than you think.',
+      author: 'Marcus Webb',
+      date: 'Feb 14, 2026',
+      readTime: '11 min',
+      views: '28.5K',
+      image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop',
+      featured: true,
+    },
+    {
+      id: 20,
+      title: 'Poetry for the Present Moment',
+      excerpt: 'In times of crisis, verse becomes essential for processing human experience.',
+      author: 'Elena Rodriguez',
+      date: 'Feb 11, 2026',
+      readTime: '6 min',
+      views: '14.7K',
+      image: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1?w=600&h=400&fit=crop',
+      featured: false,
+    },
+    {
+      id: 21,
+      title: 'The Return of the Long Read in the Age of TikTok',
+      excerpt: 'Why deep reading is making a comeback among younger generations.',
+      author: 'Sarah Chen',
+      date: 'Feb 9, 2026',
+      readTime: '8 min',
+      views: '11.2K',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
       featured: true,
     },
   ],
   interviews: [
     {
-      id: 13,
+      id: 22,
       title: 'A Conversation with Philosopher Dr. Amira Okafor',
       excerpt: 'On ethics, technology, and the future of human consciousness.',
       author: 'Sarah Chen',
@@ -200,61 +335,61 @@ const allArticles = {
       featured: true,
     },
     {
-      id: 14,
-      title: 'Poet Laureate James Wright on Finding Beauty',
-      excerpt: 'An intimate discussion about craft, inspiration, and the power of words.',
-      author: 'Marcus Webb',
-      date: 'Feb 9, 2026',
-      readTime: '12 min',
-      views: '6.7K',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop',
-      featured: false,
+      id: 23,
+      title: 'Contrarian Investor: "The Market Is Mostly Emotion"',
+      excerpt: 'An anonymous hedge fund manager on why retail investors always lose.',
+      author: 'David Park',
+      date: 'Feb 8, 2026',
+      readTime: '18 min',
+      views: '12.4K',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
+      featured: true,
     },
     {
-      id: 15,
-      title: 'Artist Yuki Tanaka Redefines Space',
-      excerpt: 'How installation art challenges our perception of environment.',
-      author: 'Elena Rodriguez',
-      date: 'Feb 7, 2026',
-      readTime: '10 min',
-      views: '5.4K',
-      image: 'https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=600&h=400&fit=crop',
-      featured: true,
+      id: 24,
+      title: 'Former Tech Executive: "I Built the Addiction Machine"',
+      excerpt: 'A whistleblower on how social media engineers compulsive behavior.',
+      author: 'Marcus Webb',
+      date: 'Feb 5, 2026',
+      readTime: '20 min',
+      views: '19.7K',
+      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop',
+      featured: false,
     },
   ],
   essays: [
     {
-      id: 16,
-      title: 'On the Ethics of Artificial Intelligence',
-      excerpt: 'A deep exploration of moral questions posed by emerging technology.',
-      author: 'David Park',
-      date: 'Feb 14, 2026',
-      readTime: '18 min',
-      views: '11.5K',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-      featured: true,
-    },
-    {
-      id: 17,
-      title: 'The Personal is Political: Revisited',
+      id: 25,
+      title: 'The Personal Is Political: Revisited',
       excerpt: 'Fifty years later, reconsidering the feminist mantra through contemporary eyes.',
       author: 'Sarah Chen',
-      date: 'Feb 10, 2026',
+      date: 'Feb 13, 2026',
       readTime: '14 min',
       views: '9.8K',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      featured: false,
+      featured: true,
     },
     {
-      id: 18,
-      title: 'Letters to a Young Philosophers',
-      excerpt: 'Advice, warnings, and encouragement for the next generation of thinkers.',
-      author: 'Marcus Webb',
-      date: 'Feb 6, 2026',
+      id: 26,
+      title: 'Letters to a Young Contrarian',
+      excerpt: 'Advice, warnings, and encouragement for the next generation of independent thinkers.',
+      author: 'Elena Rodriguez',
+      date: 'Feb 9, 2026',
       readTime: '16 min',
       views: '7.3K',
       image: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&h=400&fit=crop',
       featured: true,
+    },
+    {
+      id: 27,
+      title: 'The Architecture of Belief: How Ideas Take Hold',
+      excerpt: 'Why some beliefs spread like wildfire while others die in obscurity.',
+      author: 'David Park',
+      date: 'Feb 6, 2026',
+      readTime: '12 min',
+      views: '11.1K',
+      image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&h=400&fit=crop',
+      featured: false,
     },
   ],
 }
@@ -406,6 +541,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <div className="grid md:grid-cols-4 gap-6">
               {Object.entries(categories)
                 .filter(([key]) => key !== slug)
+                .slice(0, 4)
                 .map(([key, cat]) => (
                   <Link key={key} href={`/category/${key}`} className="group">
                     <div className={`card !p-0 overflow-hidden text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
@@ -438,8 +574,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 Get More {category.title}
               </h2>
               <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-                Subscribe to receive weekly {category.title.toLowerCase()} articles and poems delivered
-                straight to your inbox.
+                Subscribe to receive weekly {category.title.toLowerCase()} articles delivered
+                straight to your inbox. Unpopular angles, unconventional thinking.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -471,7 +607,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 <span className="text-brand-red">UN</span><span className="text-white">Popular</span>
               </Link>
               <p className="text-gray-400 text-sm mb-4">
-                Philosophy and poetry for the present moment.
+                Unpopular truths for unpopular times.
               </p>
               <div className="flex gap-3">
                 <a href="#" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary-500 transition-colors">
@@ -490,10 +626,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <div>
               <h4 className="font-display text-lg font-bold mb-4 text-primary-400">Explore</h4>
               <ul className="space-y-2">
+                <li><Link href="/breaking" className="text-gray-400 hover:text-white transition-colors">Breaking</Link></li>
                 <li><Link href="/read" className="text-gray-400 hover:text-white transition-colors">Read</Link></li>
                 <li><Link href="/issues" className="text-gray-400 hover:text-white transition-colors">Issues</Link></li>
                 <li><Link href="/shop" className="text-gray-400 hover:text-white transition-colors">Shop</Link></li>
-                <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               </ul>
             </div>
 
@@ -502,16 +638,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               <h4 className="font-display text-lg font-bold mb-4 text-accent-orange">Categories</h4>
               <ul className="space-y-2">
                 <li><Link href="/category/philosophy" className="text-gray-400 hover:text-white transition-colors">Philosophy</Link></li>
-                <li><Link href="/category/poetry" className="text-gray-400 hover:text-white transition-colors">Poetry</Link></li>
-                <li><Link href="/category/culture" className="text-gray-400 hover:text-white transition-colors">Culture</Link></li>
-                <li><Link href="/category/lifestyle" className="text-gray-400 hover:text-white transition-colors">Lifestyle</Link></li>
+                <li><Link href="/category/politics" className="text-gray-400 hover:text-white transition-colors">Politics</Link></li>
+                <li><Link href="/category/technology" className="text-gray-400 hover:text-white transition-colors">Technology</Link></li>
+                <li><Link href="/category/finance" className="text-gray-400 hover:text-white transition-colors">Finance</Link></li>
               </ul>
             </div>
 
             {/* Newsletter */}
             <div>
               <h4 className="font-display text-lg font-bold mb-4 text-accent-purple">Newsletter</h4>
-              <p className="text-gray-400 text-sm mb-3">Weekly philosophy and poetry</p>
+              <p className="text-gray-400 text-sm mb-3">Weekly unpopular thinking</p>
               <div className="flex gap-2">
                 <input
                   type="email"
@@ -528,7 +664,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2026 Unlettrd. All rights reserved.
+              © 2026 UNPopular. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">Privacy</Link>
