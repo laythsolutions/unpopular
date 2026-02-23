@@ -55,7 +55,7 @@ export default function ShopPage() {
               Shop
             </span>
             <h1 className="font-display text-5xl md:text-6xl mb-6 font-bold">
-              The Unlettrd Store
+              The UNPopular Store
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
               Philosophy and poetry for your life. Wear it, carry it, display it.
@@ -283,7 +283,7 @@ export default function ShopPage() {
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2026 Unlettrd. All rights reserved.
+              © 2026 UNPopular. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">Privacy</Link>
