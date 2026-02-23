@@ -77,9 +77,14 @@ export default function NewsprkHeader() {
               <ul className={`md:flex items-center gap-0 md:gap-1 ${isMenuOpen ? 'block' : 'hidden'} md:block flex-1`}>
                 {[
                   { name: 'Home', href: '/' },
+                  { name: 'Breaking', href: '/breaking' },
                   { name: 'Philosophy', href: '/category/philosophy' },
-                  { name: 'Poetry', href: '/category/poetry' },
-                  { name: 'Culture', href: '/category/culture' },
+                  { name: 'Politics', href: '/category/politics' },
+                  { name: 'Technology', href: '/category/technology' },
+                  { name: 'Finance', href: '/category/finance' },
+                  { name: 'Health', href: '/category/health' },
+                  { name: 'Sport', href: '/category/sport' },
+                  { name: 'Lit & Culture', href: '/category/literature-culture' },
                   { name: 'Interviews', href: '/category/interviews' },
                   { name: 'Essays', href: '/category/essays' },
                   { name: 'Issues', href: '/issues' },

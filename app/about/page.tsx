@@ -5,37 +5,32 @@ import Link from 'next/link'
 
 const values = [
   {
-    icon: '',
-    title: 'Clarity',
-    description: 'No academic jargon, no pretense. Philosophy should be accessible to anyone willing to think.',
+    title: 'Unpopular Angles',
+    description: 'We don\'t tell you what to think. We show you how to think from overlooked paradigms and contrarian perspectives.',
     gradient: 'from-primary-500 to-primary-600',
     bgColor: 'from-primary-50 to-primary-100',
   },
   {
-    icon: '',
-    title: 'Relevance',
-    description: 'Philosophy is not an abstract exercise. It is a tool for understanding the actual world we live in.',
+    title: 'Conversational Truth',
+    description: 'No academic jargon, no pretense. Philosophy should be accessible to anyone willing to think.',
     gradient: 'from-accent-orange to-accent-orange-dark',
     bgColor: 'from-orange-50 to-orange-100',
   },
   {
-    icon: '',
-    title: 'Depth',
-    description: 'Beyond surface-level takes. We go deep because the truth deserves more than a headline.',
+    title: 'Thought-Provoking',
+    description: 'Beyond surface-level takes and hot takes. We go deep because the truth deserves more than a headline.',
     gradient: 'from-accent-purple to-accent-purple-dark',
     bgColor: 'from-purple-50 to-purple-100',
   },
   {
-    icon: '',
-    title: 'Honesty',
-    description: 'Intellectual integrity over ideology. We would rather be right than popular.',
+    title: 'Skeptical of Power',
+    description: 'Intellectual integrity over ideology. We question state power, corporate power, and media narratives alike.',
     gradient: 'from-brand-red to-brand-red-dark',
     bgColor: 'from-red-50 to-red-100',
   },
   {
-    icon: '',
-    title: 'Beauty',
-    description: 'Ideas deserve beautiful expression. Philosophy and poetry together: head and heart.',
+    title: 'Issue-Driven',
+    description: 'No fixed enemies. We analyze what\'s happening now, not what fits a pre-written ideology.',
     gradient: 'from-primary-600 via-accent-purple to-accent-purple-dark',
     bgColor: 'from-primary-50 to-purple-50',
   },
@@ -43,28 +38,58 @@ const values = [
 
 const categories = [
   {
-    title: 'The Moment',
-    description: 'Current events from the past 1-4 weeks, examined philosophically.',
+    title: 'Philosophy',
+    description: 'Ideas, ethics, political philosophy, and the frameworks that shape our thinking.',
     color: 'border-primary-500',
     gradient: 'from-primary-500 to-primary-600',
   },
   {
-    title: 'The Mirror',
-    description: 'Historical events with modern relevance. Pattern recognition across time.',
+    title: 'Politics',
+    description: 'Power, governance, policy analysis from unpopular perspectives.',
     color: 'border-accent-orange',
     gradient: 'from-accent-orange to-accent-orange-dark',
   },
   {
-    title: 'The Current',
-    description: 'Ongoing cultural phenomena and longer-term social observations.',
+    title: 'Technology',
+    description: 'Tech critique, AI, surveillance capitalism, and digital life examined philosophically.',
     color: 'border-accent-purple',
     gradient: 'from-accent-purple to-accent-purple-dark',
   },
   {
-    title: 'The Stand',
-    description: 'Direct philosophical positions. Longer-form editorials that take a stance.',
+    title: 'Finance',
+    description: 'Economics, markets, money systems, wealth critique, and the philosophy of capital.',
     color: 'border-brand-red',
     gradient: 'from-brand-red to-brand-red-dark',
+  },
+  {
+    title: 'Health',
+    description: 'Medicine, wellness, bioethics, food systems, and questioning medical consensus.',
+    color: 'border-primary-500',
+    gradient: 'from-primary-500 to-primary-600',
+  },
+  {
+    title: 'Sport',
+    description: 'Athletics, competition, the culture of games, and what sports reveal about human nature.',
+    color: 'border-accent-orange',
+    gradient: 'from-accent-orange to-accent-orange-dark',
+  },
+  {
+    title: 'Literature & Culture',
+    description: 'Books, art, media, poetry — and how culture shapes what we believe.',
+    color: 'border-accent-purple',
+    gradient: 'from-accent-purple to-accent-purple-dark',
+  },
+  {
+    title: 'Interviews',
+    description: 'Conversations with thinkers, contrarians, and people who see things differently.',
+    color: 'border-brand-red',
+    gradient: 'from-brand-red to-brand-red-dark',
+  },
+  {
+    title: 'Essays',
+    description: 'Long-form eclectic writing that doesn\'t fit neat categories.',
+    color: 'border-primary-500',
+    gradient: 'from-primary-500 to-primary-600',
   },
 ]
 
@@ -90,7 +115,7 @@ export default function AboutPage() {
               About UNPopular
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Philosophy and poetry for the present moment.
+              Unpopular truths for unpopular times. We show you how to think from angles the mainstream misses.
             </p>
           </div>
         </section>
@@ -107,9 +132,13 @@ export default function AboutPage() {
               </h2>
             </div>
             <div className="card !bg-gradient-to-br from-white to-primary-50 !border-primary-200 !p-10 text-center">
-              <p className="text-xl text-gray-700 leading-relaxed">
-                UNPopular examines current and historical events through the lens of accessible philosophy,
-                distilling complex truths into poetry that resonates. We make wisdom urgent and urgency wise.
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                UNPopular examines current events, politics, technology, finance, health, sport, and culture
+                through the lens of contrarian philosophy. We make wisdom urgent and make you think harder
+                about what you think you know.
+              </p>
+              <p className="text-lg text-gray-600 italic">
+                "We're not here to tell you what to think. We're here to show you how to think — from unpopular angles and overlooked paradigms."
               </p>
             </div>
           </div>
@@ -133,11 +162,6 @@ export default function AboutPage() {
                   key={index}
                   className={`card !bg-gradient-to-br ${value.bgColor} !border-white/50 p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
                 >
-                  {value.icon && (
-                    <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br ${value.gradient} text-3xl shadow-lg`}>
-                      {value.icon}
-                    </div>
-                  )}
                   <h3 className="font-display text-xl font-bold mb-3 text-gray-900">
                     {value.title}
                   </h3>
@@ -155,14 +179,14 @@ export default function AboutPage() {
           <div className="container">
             <div className="text-center mb-12">
               <span className="text-xs font-ui text-accent-orange uppercase tracking-widest font-bold mb-2 block">
-                What We Publish
+                What We Cover
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold">
                 Our Categories
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categories.map((category, index) => (
                 <div key={index} className={`border-l-4 ${category.color} pl-6 pr-4 py-5 bg-white rounded-r-lg shadow-md hover:shadow-lg transition-all`}>
                   <div className="flex items-start justify-between mb-2">
@@ -203,11 +227,11 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Article</h3>
+                    <h3 className="font-display text-xl font-bold mb-2">Conversational Analysis</h3>
                     <p className="text-white/80 text-sm mb-1">800-1,500 words</p>
                     <p className="text-white/70 text-sm">
-                      Analyzes the event/topic, provides philosophical framework and historical context,
-                      makes a clear argument in accessible prose.
+                      Thought-provoking examination from unpopular angles. Accessible but substantial.
+                      No jargon, no pretense—just honest thinking.
                     </p>
                   </div>
                 </div>
@@ -221,11 +245,11 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Poem</h3>
+                    <h3 className="font-display text-xl font-bold mb-2">Poetry (Where Appropriate)</h3>
                     <p className="text-white/80 text-sm mb-1">12-30 lines</p>
                     <p className="text-white/70 text-sm">
-                      Distills the essence of the article, creates emotional resonance, and stands
-                      alone while being enhanced by the article.
+                      Appears where it elevates the piece—especially in Literature & Culture,
+                      but anywhere a poem distills truth better than prose.
                     </p>
                   </div>
                 </div>
@@ -249,7 +273,7 @@ export default function AboutPage() {
             <div className="card !bg-gradient-to-br from-white to-primary-50 !border-primary-200 !p-10 text-center mb-8">
               <p className="text-xl text-gray-700 leading-relaxed">
                 We publish weekly. We think carefully. We write clearly. We do not flatter.
-                We do not preach. We invite you to think alongside us.
+                We do not preach. We invite you to think alongside us—from angles you haven't considered.
               </p>
             </div>
 
@@ -261,14 +285,14 @@ export default function AboutPage() {
                 It is what is.
                 <br />
                 <br />
-                We do not make it easier.
+                We don't make it easier.
                 <br />
                 We make it clearer.
                 <br />
                 <br />
-                Philosophy for the present moment.
+                From unpopular angles,
                 <br />
-                Poetry for what matters.
+                overlooked paradigms,
                 <br />
                 <br />
                 Welcome to UNPopular.
@@ -285,11 +309,11 @@ export default function AboutPage() {
                 Join Us
               </span>
               <h2 className="font-display text-3xl md:text-4xl mb-4">
-                Be Part of UNPopular
+                Think With Us
               </h2>
               <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-                Subscribe to support independent philosophical writing. Get weekly articles and poems
-                delivered to your inbox.
+                Subscribe to support independent philosophical writing. Get weekly articles,
+                breaking news analysis, and letters to the editor.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -308,6 +332,30 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Letters CTA */}
+        <section className="py-16">
+          <div className="container container--narrow">
+            <div className="card !bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white !p-10 text-center">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-accent-orange to-accent-orange-dark text-white rounded-full text-xs font-ui font-bold uppercase tracking-wider mb-4 shadow-lg">
+                Letters to the Editor
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl mb-4">
+                Your Turn
+              </h2>
+              <p className="text-gray-300 mb-6 max-w-xl mx-auto">
+                Disagree? Agree? Have a unpopular angle of your own? We publish letters from readers.
+                This is a conversation, not a lecture.
+              </p>
+              <a
+                href="mailto:letters@unpopular.dev"
+                className="inline-block px-8 py-4 bg-white text-gray-900 font-ui font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+              >
+                Send a Letter
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Enhanced Footer */}
@@ -321,7 +369,7 @@ export default function AboutPage() {
                 <span className="text-brand-red">UN</span><span className="text-white">Popular</span>
               </Link>
               <p className="text-gray-400 text-sm mb-4">
-                Philosophy and poetry for the present moment.
+                Unpopular truths for unpopular times.
               </p>
               <div className="flex gap-3">
                 <a href="#" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary-500 transition-colors">
@@ -340,10 +388,10 @@ export default function AboutPage() {
             <div>
               <h4 className="font-display text-lg font-bold mb-4 text-primary-400">Explore</h4>
               <ul className="space-y-2">
+                <li><Link href="/breaking" className="text-gray-400 hover:text-white transition-colors">Breaking</Link></li>
                 <li><Link href="/read" className="text-gray-400 hover:text-white transition-colors">Read</Link></li>
                 <li><Link href="/issues" className="text-gray-400 hover:text-white transition-colors">Issues</Link></li>
                 <li><Link href="/shop" className="text-gray-400 hover:text-white transition-colors">Shop</Link></li>
-                <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               </ul>
             </div>
 
@@ -351,17 +399,17 @@ export default function AboutPage() {
             <div>
               <h4 className="font-display text-lg font-bold mb-4 text-accent-orange">Categories</h4>
               <ul className="space-y-2">
-                <li><Link href="/read?category=philosophy" className="text-gray-400 hover:text-white transition-colors">Philosophy</Link></li>
-                <li><Link href="/read?category=poetry" className="text-gray-400 hover:text-white transition-colors">Poetry</Link></li>
-                <li><Link href="/read?category=culture" className="text-gray-400 hover:text-white transition-colors">Culture</Link></li>
-                <li><Link href="/read?category=lifestyle" className="text-gray-400 hover:text-white transition-colors">Lifestyle</Link></li>
+                <li><Link href="/category/philosophy" className="text-gray-400 hover:text-white transition-colors">Philosophy</Link></li>
+                <li><Link href="/category/politics" className="text-gray-400 hover:text-white transition-colors">Politics</Link></li>
+                <li><Link href="/category/technology" className="text-gray-400 hover:text-white transition-colors">Technology</Link></li>
+                <li><Link href="/category/finance" className="text-gray-400 hover:text-white transition-colors">Finance</Link></li>
               </ul>
             </div>
 
             {/* Newsletter */}
             <div>
               <h4 className="font-display text-lg font-bold mb-4 text-accent-purple">Newsletter</h4>
-              <p className="text-gray-400 text-sm mb-3">Weekly philosophy and poetry</p>
+              <p className="text-gray-400 text-sm mb-3">Weekly unpopular thinking</p>
               <div className="flex gap-2">
                 <input
                   type="email"

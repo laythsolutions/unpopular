@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 const breakingNews = [
-  { id: 1, text: 'New philosophical exploration: The ethics of artificial consciousness', category: 'Philosophy' },
-  { id: 2, text: 'Poetry collection "Moments of Being" featured in Literary Review', category: 'Literature' },
-  { id: 3, text: 'UNLettr\'d launches quarterly print edition subscription', category: 'News' },
-  { id: 4, text: 'Interview: Stoicism in the modern workplace', category: 'Interview' },
+  { id: 1, text: 'The ethics of AI consciousness: Are we creating moral subjects?', category: 'Philosophy' },
+  { id: 2, text: 'Why regulation always lags behind technological disruption', category: 'Technology' },
+  { id: 3, text: 'The invisible tax: How inflation steals from the poor silently', category: 'Finance' },
+  { id: 4, text: 'Medical consensus isn\'t truth: What we got wrong about diet', category: 'Health' },
+  { id: 5, text: 'The commodification of athletics: When sport became content', category: 'Sport' },
+  { id: 6, text: 'Why nobody reads anymore: The death of cultural literacy', category: 'Lit & Culture' },
+  { id: 7, text: 'Power doesn\'t corrupt. Power reveals.', category: 'Politics' },
 ]
 
 export default function BreakingNews() {
