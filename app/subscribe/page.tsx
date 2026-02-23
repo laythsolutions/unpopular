@@ -88,7 +88,7 @@ export default function SubscribePage() {
               Join the Community
             </span>
             <h1 className="font-display text-5xl md:text-6xl mb-6 font-bold">
-              Subscribe to Unlettrd
+              Subscribe to UNPopular
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
               Philosophy and poetry for the present moment. Support independent writing.
@@ -391,7 +391,7 @@ export default function SubscribePage() {
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2026 Unlettrd. All rights reserved.
+              © 2026 UNPopular. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">Privacy</Link>
