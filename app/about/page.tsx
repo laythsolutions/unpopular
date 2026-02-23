@@ -87,7 +87,7 @@ export default function AboutPage() {
               Our Story
             </span>
             <h1 className="font-display text-5xl md:text-6xl mb-6 font-bold">
-              About Unlettrd
+              About UNPopular
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
               Philosophy and poetry for the present moment.
@@ -108,7 +108,7 @@ export default function AboutPage() {
             </div>
             <div className="card !bg-gradient-to-br from-white to-primary-50 !border-primary-200 !p-10 text-center">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Unlettrd examines current and historical events through the lens of accessible philosophy,
+                UNPopular examines current and historical events through the lens of accessible philosophy,
                 distilling complex truths into poetry that resonates. We make wisdom urgent and urgency wise.
               </p>
             </div>
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 Poetry for what matters.
                 <br />
                 <br />
-                Welcome to Unlettrd.
+                Welcome to UNPopular.
               </p>
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function AboutPage() {
                 Join Us
               </span>
               <h2 className="font-display text-3xl md:text-4xl mb-4">
-                Be Part of Unlettrd
+                Be Part of UNPopular
               </h2>
               <p className="text-gray-600 mb-6 max-w-xl mx-auto">
                 Subscribe to support independent philosophical writing. Get weekly articles and poems
@@ -378,7 +378,7 @@ export default function AboutPage() {
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2026 Unlettrd. All rights reserved.
+              © 2026 UNPopular. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">Privacy</Link>
